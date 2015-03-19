@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">NavigatorApp</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="drawer_open">Open Navigation Drawer</string>
+    <string name="drawer_close">Close Navigation Drawer</string>
+    <string-array name="ilist">
+        <item>Sign In</item>
+        <item>Home</item>
+        <item>Contacts</item>
+        <item>Wanted</item>
+        <item>Maintenance</item>
+        <item>Real Estate</item>
+        <item>Sales</item>
+    </string-array>
+</resources>
