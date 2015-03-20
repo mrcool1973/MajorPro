@@ -1,6 +1,10 @@
 package com.coolapp.navigatorapp;
 
+import android.content.Intent;
 import android.content.res.Configuration;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentActivity;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
@@ -19,6 +23,8 @@ public class MainActivity extends ActionBarActivity implements AdapterView.OnIte
     private ListView listView;
     private String[] ilist;
     private ActionBarDrawerToggle drawerListener;
+
+    Fragment2 fragment2 = new Fragment2();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -94,7 +100,37 @@ public class MainActivity extends ActionBarActivity implements AdapterView.OnIte
 
     public void selectItem(int position) {
         listView.setItemChecked(position,true);
+        Fragment newFragment;
+        FragmentActivity f1;
         setTitle(ilist[position]);
+        FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
+        // Locate Position
+        switch (position) {
+
+            case 0:
+                newFragment=new Fragment2();
+                ft.replace(R.id.mainContent,newFragment);
+                ft.commit();
+
+                break;
+
+            case 1:
+
+                newFragment=new Fragment4();
+                ft.replace(R.id.mainContent,newFragment);
+                ft.commit();
+
+                break;
+
+            case 2:
+               /* f1=new Fragment1();
+                ft.replace(R.id.mainContent,f1);*/
+                break;
+        }
+
+
+        // Close drawer
+        drawerLayout.closeDrawer(listView);
     }
 
     public void setTitle(String title){

@@ -14,4 +14,11 @@
         <item>Real Estate</item>
         <item>Sales</item>
     </string-array>
+    <string name="new_ads1">jnfdjsnfjdngjfdn</string>
+    <string name="new_ads2">Close Navigation Drawer</string>
+    <string name="new_ads3">Close Navigation Drawer</string>
+    <string-array name="tab_name">
+    <item>Top Ads</item>
+    <item>New Ads</item>
+    </string-array>
 </resources>
